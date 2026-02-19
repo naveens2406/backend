@@ -1,0 +1,30 @@
+.toggle {
+    display: flex;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 3px;
+    gap: 3px;
+}
+
+.option {
+    flex: 1;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: calc(var(--radius-md) - 3px);
+    color: var(--text-secondary);
+    transition: all var(--transition);
+    text-align: center;
+}
+
+.option:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.option.active {
+    background: rgba(109, 89, 255, 0.2);
+    color: var(--accent);
+    border: 1px solid var(--border-active);
+}

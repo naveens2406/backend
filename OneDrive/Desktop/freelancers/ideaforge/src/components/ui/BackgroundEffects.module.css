@@ -1,0 +1,159 @@
+.container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+    background: #000000;
+}
+
+.canvas {
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.aurora {
+    position: absolute;
+    inset: 0;
+    opacity: 0.2;
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.auroraLayer1 {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 0, 0.3) 0%, transparent 70%);
+    animation: aurora1 20s ease-in-out infinite;
+}
+
+.auroraLayer2 {
+    position: absolute;
+    top: 10%;
+    right: -20%;
+    width: 70%;
+    height: 70%;
+    background: radial-gradient(ellipse at center, rgba(0, 200, 0, 0.2) 0%, transparent 70%);
+    animation: aurora2 25s ease-in-out infinite;
+}
+
+.auroraLayer3 {
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 0, 0.25) 0%, transparent 70%);
+    animation: aurora3 18s ease-in-out infinite;
+}
+
+@keyframes aurora1 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    33% {
+        transform: translate(10%, 15%) rotate(10deg) scale(1.1);
+    }
+    66% {
+        transform: translate(-5%, 10%) rotate(-5deg) scale(0.95);
+    }
+}
+
+@keyframes aurora2 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    33% {
+        transform: translate(-15%, -10%) rotate(-15deg) scale(1.15);
+    }
+    66% {
+        transform: translate(5%, -5%) rotate(5deg) scale(0.9);
+    }
+}
+
+@keyframes aurora3 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    33% {
+        transform: translate(-10%, -15%) rotate(8deg) scale(1.05);
+    }
+    66% {
+        transform: translate(10%, -5%) rotate(-8deg) scale(0.92);
+    }
+}
+
+.orbs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    pointer-events: auto;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    z-index: 1;
+}
+
+.orb:hover {
+    filter: blur(40px) brightness(1.2);
+    opacity: 0.7;
+}
+
+.orbSplit {
+    animation: splitIn 0.5s ease-out;
+}
+
+@keyframes splitIn {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+}
+
+.gridPulse {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 255, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 0, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    animation: gridPulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes gridPulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .orb {
+        filter: blur(40px);
+        opacity: 0.4;
+    }
+    
+    .aurora {
+        filter: blur(50px);
+        opacity: 0.15;
+    }
+}

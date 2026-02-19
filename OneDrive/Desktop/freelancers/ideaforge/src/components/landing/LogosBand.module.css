@@ -1,0 +1,57 @@
+.band {
+    padding: 40px 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: #000000;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 28px;
+    opacity: 0.8;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.chip {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all var(--transition);
+    cursor: default;
+}
+
+.chip:hover {
+    color: #00ff00;
+    border-color: #00ff00;
+}
+
+@media (max-width: 768px) {
+    .band {
+        padding: 32px 24px;
+    }
+
+    .logos {
+        gap: 10px;
+    }
+
+    .chip {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}

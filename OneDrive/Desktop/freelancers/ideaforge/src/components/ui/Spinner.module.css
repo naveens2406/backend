@@ -1,0 +1,39 @@
+.spinner {
+    display: inline-block;
+    border-radius: 50%;
+    border-style: solid;
+    animation: spin 0.7s linear infinite;
+}
+
+.sm {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+}
+
+.md {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+}
+
+.lg {
+    width: 32px;
+    height: 32px;
+    border-width: 3px;
+}
+
+.accent {
+    border-color: rgba(109, 89, 255, 0.25);
+    border-top-color: var(--accent);
+}
+
+.white {
+    border-color: rgba(255, 255, 255, 0.25);
+    border-top-color: white;
+}
+
+.cyan {
+    border-color: rgba(0, 229, 255, 0.25);
+    border-top-color: var(--accent-2);
+}

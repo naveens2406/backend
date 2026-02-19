@@ -1,0 +1,58 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+/* Sizes */
+.sm {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.55rem;
+}
+
+.md {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.75rem;
+}
+
+/* Variants */
+.default {
+    background: rgba(109, 89, 255, 0.12);
+    color: var(--accent);
+    border-color: rgba(109, 89, 255, 0.25);
+}
+
+.cyan {
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--accent-2);
+    border-color: rgba(0, 229, 255, 0.25);
+}
+
+.green {
+    background: rgba(0, 229, 160, 0.1);
+    color: var(--success);
+    border-color: rgba(0, 229, 160, 0.25);
+}
+
+.warning {
+    background: rgba(255, 179, 71, 0.1);
+    color: var(--warning);
+    border-color: rgba(255, 179, 71, 0.25);
+}
+
+.outline {
+    background: transparent;
+    color: var(--text-secondary);
+    border-color: var(--border);
+}
+
+/* Domain badge uses CSS var */
+.domain {
+    background: color-mix(in srgb, var(--badge-color) 15%, transparent);
+    color: var(--badge-color);
+    border-color: color-mix(in srgb, var(--badge-color) 35%, transparent);
+}

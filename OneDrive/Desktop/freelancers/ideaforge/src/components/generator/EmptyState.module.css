@@ -1,0 +1,64 @@
+.container {
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.dashedBox {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+    animation: pulse 3s infinite;
+}
+
+.glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, rgba(109, 89, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.icon {
+    color: var(--text-muted);
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    max-width: 320px;
+    line-height: 1.6;
+}
+
+.text strong {
+    color: var(--accent);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        border-color: var(--border);
+    }
+
+    50% {
+        border-color: var(--border-active);
+    }
+}

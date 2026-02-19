@@ -1,0 +1,85 @@
+.section {
+    padding: 100px 48px;
+    background: #000000;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+.videoCard {
+    max-width: 800px;
+    margin: 64px auto 0;
+    aspect-ratio: 16 / 9;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 40px 120px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(0, 255, 0, 0.1);
+}
+
+.videoCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.05), transparent);
+    pointer-events: none;
+}
+
+.playBtn {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #00ff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+    transition: all var(--transition);
+    z-index: 1;
+}
+
+.playBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(0, 255, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 24px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .videoCard {
+        margin-top: 40px;
+        border-radius: var(--radius-lg);
+    }
+
+    .playBtn {
+        width: 56px;
+        height: 56px;
+    }
+}

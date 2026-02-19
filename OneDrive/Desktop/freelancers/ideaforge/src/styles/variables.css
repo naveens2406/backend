@@ -1,0 +1,45 @@
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-surface: #111111;
+    --bg-card: #0a0a0a;
+    --bg-card-hover: #141414;
+
+    --accent: #00ff00;
+    --accent-2: #00ff00;
+    --accent-green: #00ff00;
+    --gradient: linear-gradient(135deg, #00ff00, #00cc00);
+
+    --success: #00ff00;
+    --warning: #00ff00;
+    --danger: #00ff00;
+
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #888888;
+
+    --border: rgba(255, 255, 255, 0.15);
+    --border-bright: rgba(255, 255, 255, 0.25);
+    --border-active: rgba(0, 255, 0, 0.5);
+
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    --font-body: 'Space Grotesk', sans-serif;
+
+    --nav-height: 64px;
+
+    --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 40px rgba(0, 255, 0, 0.2);
+    --shadow-hero: 0 40px 120px rgba(0, 0, 0, 0.8);
+    --shadow-accent: 0 0 20px rgba(0, 255, 0, 0.3);
+
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-pill: 100px;
+
+    --transition: 0.2s ease;
+    --transition-slow: 0.4s ease;
+    --transition-fast: 0.15s ease;
+}

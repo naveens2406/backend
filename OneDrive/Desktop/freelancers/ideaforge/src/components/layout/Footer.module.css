@@ -1,0 +1,154 @@
+.footer {
+    background: #0a0a0a;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 64px 48px 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
+
+.brand {
+    max-width: 260px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.logoIcon {
+    width: 32px;
+    height: 32px;
+    background: #00ff00;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.logoText {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.social {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.socialBtn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.socialBtn:hover {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.colTitle {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.colList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.colLink {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color var(--transition);
+    opacity: 0.8;
+}
+
+.colLink:hover {
+    color: #00ff00;
+    opacity: 1;
+}
+
+.bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+
+    .brand {
+        grid-column: span 2;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 48px 24px 24px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .brand {
+        grid-column: span 1;
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
